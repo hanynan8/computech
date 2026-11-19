@@ -1,4 +1,5 @@
 // app/printers/page.js (Server Component)
+import { SITE } from '@/lib/site';
 import PrintersClient from './_printersClient';
 import { getCollectionData } from '@/lib/serverData';
 
@@ -11,7 +12,7 @@ export const metadata = {
     'طابعات', 'طابعة ليزر', 'طابعة نافثة للحبر', 'طابعة حرارية', 'طابعات مكتبية', 'طابعات تجارية', 'طابعة صور', 'طابعة ملصقات', 'أجهزة طباعة', 'ورق طباعة', 'حبر طابعات', 'ماسح ضوئي', 'طابعة متعددة الوظائف', 'طابعة إيصالات'
   ],
   openGraph: {
-    url: 'https://lap-tech-five.vercel.app/printers',
+    url: `${SITE.url}/printers`,
     title: 'الطابعات',
     description: 'تصفح أحدث أنواع الطابعات: مواصفات تفصيلية وأسعار تنافسية لمساعدتك في اختيار الأنسب.',
     type: 'website'

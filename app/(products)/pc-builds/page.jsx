@@ -1,4 +1,5 @@
 // app/pc-builds/page.js - Server Component
+import { SITE } from '@/lib/site';
 import PCBuildsClient from './_pcClient';
 import { getCollectionData } from '@/lib/serverData';
 
@@ -27,7 +28,7 @@ export const metadata = {
     'كيسة كمبيوتر'
   ],
   openGraph: {
-    url: 'https://lap-tech-five.vercel.app/pc-builds',
+    url: `${SITE.url}/pc-builds`,
     title: 'تجميعات الكمبيوتر - أفضل الأسعار والمواصفات',
     description: 'تصفح أفضل تجميعات الكمبيوتر: مواصفات تفصيلية ومراجعات لمساعدتك في اختيار التجميعة الأمثل لاحتياجاتك.',
     type: 'website',
@@ -74,7 +75,7 @@ export const metadata = {
     address: false,
     telephone: false,
   },
-  metadataBase: new URL('https://lap-tech-five.vercel.app'),
+  metadataBase: new URL(SITE.url),
   alternates: {
     canonical: '/pc-builds',
     languages: {

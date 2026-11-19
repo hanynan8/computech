@@ -8,6 +8,7 @@ function getBaseUrl() {
   return `http://localhost:${process.env.PORT || 3000}`;
 }
 
+import { WHATSAPP_URL } from '@/lib/site';
 import { useState, useEffect } from 'react';
 import { 
   Phone, 
@@ -30,7 +31,7 @@ import {
 import Link from 'next/link';
 
 function goToWatssap() {
-  window.open('https://wa.me/+2001201061216');
+  window.open(WHATSAPP_URL);
 }
 
 const ContactClient = ({ initialData, error: serverError }) => {

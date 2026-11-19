@@ -1,0 +1,44 @@
+{
+  "pageTitle": "موقعنا",
+  "pageSubtitle": "زوروا كمبيوتك في أسوان",
+  "mainLocation": {
+    "title": "كمبيوتك – أسوان",
+    "details": [
+      { "icon": "MapPin", "title": "العنوان", "description": "بجوار إدارة المرور – ممر مطعم كشري الصفوة – عمارة السلواوي، أسوان", "color": "from-purple-500 to-blue-500" },
+      { "icon": "Phone", "title": "الهاتف", "description": "01115915118", "color": "from-green-500 to-emerald-500" },
+      { "icon": "Clock", "title": "مواعيد العمل", "description": "[مواعيد العمل]", "color": "from-orange-500 to-red-500" }
+    ]
+  },
+  "workingHours": {
+    "title": "مواعيد العمل",
+    "schedule": [
+      { "day": "[الأيام]", "hours": "[من – إلى]" }
+    ]
+  },
+  "mapSection": {
+    "title": "الموقع على الخريطة",
+    "placeholder": { "title": "كمبيوتك – أسوان", "address": "بجوار إدارة المرور – ممر مطعم كشري الصفوة – عمارة السلواوي، أسوان" },
+    "buttons": { "directions": "الاتجاهات", "share": "مشاركة الموقع" }
+  },
+  "quickContact": {
+    "title": "تواصل سريع",
+    "methods": [
+      { "icon": "Phone", "label": "الهاتف", "value": "01115915118" },
+      { "icon": "Mail", "label": "البريد الإلكتروني", "value": "[البريد الإلكتروني]" }
+    ]
+  },
+  "features": {
+    "title": "ليه تزورنا؟",
+    "subtitle": "خدمات متاحة في المتجر",
+    "items": [
+      { "icon": "Users", "title": "استشارة ومساعدة", "description": "فريق المتجر يساعدك في اختيار الجهاز المناسب لاستخدامك وميزانيتك.", "color": "from-purple-500 to-blue-500" },
+      { "icon": "Shield", "title": "منتجات مضمونة", "description": "أجهزة بضمان — اسأل عن مدة الضمان لكل جهاز", "color": "from-green-500 to-emerald-500" },
+      { "icon": "Camera", "title": "شوف المنتج على الطبيعة", "description": "تقدر تعاين الأجهزة والإكسسوارات بنفسك قبل الشراء.", "color": "from-orange-500 to-red-500" }
+    ]
+  },
+  "visitSection": {
+    "title": "تعالَ زورنا في أسوان",
+    "subtitle": "أو كلمنا واتساب وهنساعدك",
+    "buttons": { "visit": "افتح الموقع على الخريطة", "call": "تواصل واتساب" }
+  }
+}

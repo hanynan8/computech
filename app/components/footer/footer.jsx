@@ -1,43 +1,61 @@
 import Footer from './_footClient';
-// بنقرأ من قاعدة البيانات مباشرة (getCollectionData) بدل ما الفوتر - اللي
-// بيترندر مع كل صفحة في الموقع بدون استثناء - يعمل self-fetch HTTP لـ
-// /api/data من غير تحديد collection. ده كان معناه إن كل نقلة صفحة في
-// الموقع كله كانت بتجيب قاعدة البيانات كاملة (كل المنتجات في كل الفئات)
-// بس عشان يعرض نص الفوتر. دلوقتي بيقرأ الـ footer collection بس مباشرة.
-import { getCollectionData } from '@/lib/serverData';
+import { SITE, WHATSAPP_URL } from '@/lib/site';
 
-// ISR revalidation period (in seconds) for the page
-export const revalidate = 60;
-
-const FALLBACK_FOOTER_DATA = {
+// الفوتر ستاتك بالكامل (من غير قاعدة بيانات): كل القيم من lib/site.js.
+// الحقول الفاضية (إيميل / مواعيد عمل / إنستجرام) بتختفي لحد ما تتملي.
+const FOOTER_DATA = {
   company: {
-    name: "اسم الشركة",
-    subtitle: "",
-    description: "",
-    year: new Date().getFullYear()
+    name: SITE.name,
+    subtitle: `${SITE.nameEn} – ${SITE.city}`,
+    description:
+      'متجرك لأجهزة الكمبيوتر واللابتوبات في أسوان — أجهزة جديدة واستيراد فرز أول، بضمان.',
+    year: new Date().getFullYear(),
   },
-  socialLinks: [],
-  sections: [],
-  bottomLinks: []
+  socialLinks: [
+    SITE.facebook && { platform: 'Facebook', icon: 'FaFacebook', url: SITE.facebook },
+    SITE.instagram && { platform: 'Instagram', icon: 'FaInstagram', url: SITE.instagram },
+    { platform: 'WhatsApp', icon: 'FaWhatsapp', url: WHATSAPP_URL },
+  ].filter(Boolean),
+  sections: [
+    {
+      title: 'روابط سريعة',
+      links: [
+        { text: 'الرئيسية', href: '/' },
+        { text: 'من نحن', href: '/aboutus' },
+        { text: 'اتصل بنا', href: '/contact' },
+        { text: 'موقعنا', href: '/location' },
+      ],
+    },
+    {
+      title: 'الأقسام',
+      links: [
+        { text: 'لابتوب', href: '/laptop' },
+        { text: 'مكونات كمبيوتر', href: '/component' },
+        { text: 'تجميعات PC', href: '/pc-builds' },
+        { text: 'اكسسوارات', href: '/accessories' },
+        { text: 'شاشات', href: '/monitors' },
+        { text: 'طابعات', href: '/printers' },
+        { text: 'وسائط تخزين', href: '/storage-devices' },
+        { text: 'نقاط البيع', href: '/pos' },
+        { text: 'منتجات أخرى', href: '/other' },
+      ],
+    },
+    {
+      title: 'تواصل معنا',
+      content: {
+        address: SITE.address,
+        phone: SITE.phoneDisplay,
+        email: SITE.email || '',
+        workingHours: SITE.workingHours || '',
+      },
+    },
+  ],
+  bottomLinks: [
+    { text: 'من نحن', href: '/aboutus' },
+    { text: 'اتصل بنا', href: '/contact' },
+  ],
 };
 
-// Fetch footer data directly from the DB (shared cache with navbar/pages)
-async function fetchFooterData() {
-  try {
-    const result = await getCollectionData('footer');
-    if (!result.success) return FALLBACK_FOOTER_DATA;
-
-    const data = result.data;
-    const footerData = Array.isArray(data) ? data[0] : data;
-
-    return footerData || FALLBACK_FOOTER_DATA;
-  } catch (err) {
-    console.error('Error fetching footer data:', err);
-    return FALLBACK_FOOTER_DATA;
-  }
-}
-
-export default async function Page() {
-  const footerData = await fetchFooterData();
-  return <Footer footerData={footerData} loading={false} />;
+export default function Page() {
+  return <Footer footerData={FOOTER_DATA} loading={false} />;
 }

@@ -8,13 +8,14 @@ function getBaseUrl() {
   return `http://localhost:${process.env.PORT || 3000}`;
 }
 
+import { WHATSAPP_URL } from '@/lib/site';
 import { useState, useEffect } from 'react';
 import { Users, Loader, Target, Award, Heart, Star, ChevronRight, Eye, Lightbulb, Shield, Rocket, Globe, TrendingUp, Laptop, Truck, Package, Play, Check, Clock, MapPin, Phone, Mail, MessageCircle, Calendar, Zap } from 'lucide-react';
 import Link from 'next/link';
 import Image from 'next/image';
 
 function goToWatssap() {
-  window.open('https://wa.me/+2001201061216');
+  window.open(WHATSAPP_URL);
 }
 
 const AboutUsClient = ({ initialData, error: serverError }) => {
@@ -399,6 +400,7 @@ const AboutUsClient = ({ initialData, error: serverError }) => {
       </section>
 
       {/* Brands Section */}
+      {aboutData.brands?.length > 0 && (
       <section className="py-16 sm:py-24 bg-gradient-to-br from-gray-50 to-gray-100">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12 sm:mb-16">
@@ -411,7 +413,7 @@ const AboutUsClient = ({ initialData, error: serverError }) => {
           </div>
 
           <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4 sm:gap-8">
-            {aboutData.brands.map((brand, index) => (
+            {aboutData.brands?.map((brand, index) => (
               <div key={index} className="group">
                 <div className="bg-white rounded-2xl sm:rounded-3xl p-4 sm:p-8 shadow-lg hover:shadow-2xl transform hover:scale-105 transition-all duration-300 h-24 sm:h-32 flex items-center justify-center relative overflow-hidden">
                   <div className="absolute inset-0 bg-gradient-to-br from-purple-600/5 to-blue-600/5 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
@@ -433,6 +435,7 @@ const AboutUsClient = ({ initialData, error: serverError }) => {
           </div>
         </div>
       </section>
+      )}
 
       {/* Achievements Section */}
       <section id="achievements-section" className="py-16 sm:py-24 bg-white">
@@ -478,6 +481,7 @@ const AboutUsClient = ({ initialData, error: serverError }) => {
       </section>
 
       {/* Reviews Section */}
+      {aboutData.reviews?.length > 0 && (
       <section className="py-16 sm:py-24 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12 sm:mb-16">
@@ -486,7 +490,7 @@ const AboutUsClient = ({ initialData, error: serverError }) => {
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 sm:gap-8">
-            {aboutData.reviews.map((review) => (
+            {aboutData.reviews?.map((review) => (
               <div key={review.id} className="bg-gradient-to-br from-white to-gray-50 rounded-2xl sm:rounded-3xl p-6 sm:p-8 shadow-lg hover:shadow-2xl transform hover:scale-105 transition-all duration-300">
                 <div className="flex items-center mb-4 sm:mb-6">
                   <div className="relative w-12 sm:w-16 h-12 sm:h-16 rounded-full overflow-hidden ml-3 sm:ml-4">
@@ -515,6 +519,7 @@ const AboutUsClient = ({ initialData, error: serverError }) => {
           </div>
         </div>
       </section>
+      )}
 
       {/* CTA Section */}
       <section className="py-16 sm:py-24 bg-gradient-to-r from-purple-600 via-blue-600 to-indigo-600 relative overflow-hidden">

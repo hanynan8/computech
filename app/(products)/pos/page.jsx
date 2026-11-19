@@ -1,3 +1,4 @@
+import { SITE } from '@/lib/site';
 import POSClient from './_posClient';
 import { getCollectionData } from '@/lib/serverData';
 
@@ -13,7 +14,7 @@ export const metadata = {
     locale: 'ar_EG',
     images: [
       {
-        url: 'https://lap-tech-five.vercel.app/images/pos-systems-og.jpg',
+        url: `${SITE.url}/images/pos-systems-og.jpg`,
         width: 1200,
         height: 630,
         alt: 'أنظمة نقاط البيع',
@@ -24,7 +25,7 @@ export const metadata = {
     card: 'summary_large_image',
     title: 'أنظمة نقاط البيع - POS Systems',
     description: 'اكتشف أفضل أنظمة نقاط البيع والحاسبات المكتبية لنشاطك التجاري',
-    images: ['https://lap-tech-five.vercel.app/images/pos-systems-twitter.jpg'],
+    images: [`${SITE.url}/images/pos-systems-twitter.jpg`],
   },
   robots: {
     index: true,
@@ -168,7 +169,7 @@ function generateJSONLD(data) {
     '@type': 'CollectionPage',
     name: data.pageTitle,
     description: data.pageSubtitle,
-    url: 'https://lap-tech-five.vercel.app/pos',
+    url: `${SITE.url}/pos`,
     mainEntity: {
       '@type': 'ItemList',
       numberOfItems: data.totalCount,
@@ -209,13 +210,13 @@ function generateJSONLD(data) {
           '@type': 'ListItem',
           position: 1,
           name: 'الرئيسية',
-          item: 'https://lap-tech-five.vercel.app',
+          item: SITE.url,
         },
         {
           '@type': 'ListItem',
           position: 2,
           name: 'أنظمة نقاط البيع',
-          item: 'https://lap-tech-five.vercel.app/pos',
+          item: `${SITE.url}/pos`,
         },
       ],
     },

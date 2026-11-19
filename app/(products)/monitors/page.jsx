@@ -1,4 +1,5 @@
 // app/monitors/page.js - Server Component
+import { SITE } from '@/lib/site';
 import MonitorsClient from './_monClient';
 import { getCollectionData } from '@/lib/serverData';
 
@@ -11,7 +12,7 @@ export const metadata = {
   openGraph: {
     title: 'االشاشات التقنية',
     description: 'اكتشف أفضل شاشات العرض بأسعار رائعة',
-    url: 'https://lap-tech-five.vercel.app/monitors',
+    url: `${SITE.url}/monitors`,
     type: 'website',
   },
 };

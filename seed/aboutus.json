@@ -1,0 +1,190 @@
+{
+  "aboutus": [
+    {
+      "aboutus": [
+        {
+          "hero": {
+            "title": "كمبيوتك – أسوان",
+            "subtitle": "متجرك لأجهزة الكمبيوتر واللابتوبات ومستلزماتها",
+            "description": "في كمبيوتك بنوفر لابتوبات ومكونات وإكسسوارات وخدمة بتساعدك تختار اللي يناسبك في أسوان.",
+            "backgroundImage": "https://images.unsplash.com/photo-1706101126602-5a6132b98b8b?auto=format&fit=crop&w=1600&q=80",
+            "additionalContent": {
+              "welcomeMessage": "أهلاً بك في كمبيوتك",
+              "primaryButton": {
+                "text": "قصتنا"
+              },
+              "secondaryButton": {
+                "text": "تسوق الآن"
+              }
+            }
+          },
+          "story": {
+            "title": "قصتنا",
+            "image": "https://images.unsplash.com/photo-1562408590-e32931084e23?auto=format&fit=crop&w=1200&q=80",
+            "tabs": [
+              {
+                "id": "history",
+                "title": "من نحن",
+                "content": {
+                  "title": "كمبيوتك – أسوان",
+                  "description": "[نبذة عن المتجر وبدايته – تُستكمل من صاحب المتجر]",
+                  "milestones": []
+                }
+              },
+              {
+                "id": "milestones",
+                "title": "محطات",
+                "content": {
+                  "title": "محطات في رحلتنا",
+                  "timeline": []
+                }
+              },
+              {
+                "id": "future",
+                "title": "خططنا",
+                "content": {
+                  "title": "نحو الأفضل",
+                  "description": "[خطط المتجر المستقبلية – تُستكمل]",
+                  "features": []
+                }
+              }
+            ]
+          },
+          "mission": {
+            "title": "مهمتنا",
+            "content": "[رسالة المتجر – تُستكمل]"
+          },
+          "vision": {
+            "title": "رؤيتنا",
+            "content": "[رؤية المتجر – تُستكمل]"
+          },
+          "values": [
+            {
+              "id": 1,
+              "icon": "shield",
+              "title": "الأمانة",
+              "description": "نوضح لك مواصفات المنتج وحالته بكل وضوح."
+            },
+            {
+              "id": 2,
+              "icon": "heart",
+              "title": "خدمة العملاء",
+              "description": "نساعدك في اختيار المنتج المناسب لاحتياجك وميزانيتك."
+            },
+            {
+              "id": 3,
+              "icon": "award",
+              "title": "الجودة",
+              "description": "نختار المنتجات اللي نعرضها بعناية."
+            },
+            {
+              "id": 4,
+              "icon": "users",
+              "title": "الثقة",
+              "description": "نبني علاقة طويلة مع عملائنا في أسوان."
+            }
+          ],
+          "whyChooseUs": [
+            {
+              "id": 1,
+              "icon": "laptop",
+              "title": "تشكيلة متنوعة",
+              "description": "لابتوبات ومكونات وإكسسوارات وشاشات وطابعات في مكان واحد.",
+              "gradient": "from-purple-500 to-blue-500"
+            },
+            {
+              "id": 2,
+              "icon": "mapPin",
+              "title": "في أسوان",
+              "description": "نحن قريبون منك ويمكنك زيارة المتجر ومعاينة المنتجات.",
+              "gradient": "from-green-500 to-emerald-500"
+            },
+            {
+              "id": 3,
+              "icon": "messageCircle",
+              "title": "تواصل سهل",
+              "description": "كلمنا على واتساب للاستفسار والمساعدة.",
+              "gradient": "from-orange-500 to-red-500"
+            }
+          ],
+          "brands": [],
+          "achievements": [
+            {
+              "id": 1,
+              "icon": "users",
+              "number": "[رقم]",
+              "label": "[البيان]"
+            },
+            {
+              "id": 2,
+              "icon": "package",
+              "number": "[رقم]",
+              "label": "[البيان]"
+            },
+            {
+              "id": 3,
+              "icon": "award",
+              "number": "[رقم]",
+              "label": "[البيان]"
+            },
+            {
+              "id": 4,
+              "icon": "clock",
+              "number": "[رقم]",
+              "label": "[البيان]"
+            }
+          ],
+          "reviews": [],
+          "trustIndicators": [
+            {
+              "number": "[رقم]",
+              "label": "[البيان]"
+            },
+            {
+              "number": "[رقم]",
+              "label": "[البيان]"
+            },
+            {
+              "number": "[رقم]",
+              "label": "[البيان]"
+            }
+          ],
+          "sections": {
+            "valuesSection": {
+              "title": "قيمنا الأساسية",
+              "subtitle": "المبادئ اللي بنشتغل بيها"
+            },
+            "whyChooseUsSection": {
+              "title": "ليه كمبيوتك؟",
+              "subtitle": "أسباب تخليك تختارنا"
+            },
+            "brandsSection": {
+              "title": "الماركات",
+              "subtitle": "[تُستكمل بالماركات المتاحة]"
+            },
+            "achievementsSection": {
+              "title": "كمبيوتك بالأرقام",
+              "subtitle": "[تُستكمل بأرقام حقيقية]"
+            },
+            "reviewsSection": {
+              "title": "آراء العملاء",
+              "subtitle": "[تُستكمل بآراء حقيقية]"
+            },
+            "ctaSection": {
+              "title": "ابحث عن جهازك المناسب",
+              "subtitle": "تصفح منتجاتنا أو كلمنا واتساب",
+              "buttons": {
+                "primary": {
+                  "text": "تسوق اللابتوبات"
+                },
+                "secondary": {
+                  "text": "تواصل واتساب"
+                }
+              }
+            }
+          }
+        }
+      ]
+    }
+  ]
+}

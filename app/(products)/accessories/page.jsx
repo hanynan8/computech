@@ -1,4 +1,5 @@
 // Server Code: app/accessories/page.tsx (No 'use client' - This is a Server Component)
+import { SITE } from '@/lib/site';
 import AccessoriesClient from './_accessClient'; // Adjust path as needed
 import { getCollectionData } from '@/lib/serverData';
 
@@ -12,7 +13,7 @@ export const metadata = {
     'تقنية', 'اللابتوبات', 'ملحقات الكمبيوتر', 'RGB', 'بلوتوث', 'USB', 'ملحقات صوت', 'عالم الاكسسوارات التقنية', 'اكتشف أحدث الاكسسوارات التقنية لتعزيز تجربتك الرقمية'
   ],
   openGraph: {
-    url: 'https://lap-tech-five.vercel.app/accessories',
+    url: `${SITE.url}/accessories`,
     title: 'الاكسسوارات التقنية',
     description: 'تسوق أحدث الاكسسوارات التقنية — سماعات، فارات، لوحات مفاتيح، كابلات وشواحن، وإكسسوارات الألعاب.',
     type: 'website',

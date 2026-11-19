@@ -1,4 +1,5 @@
 // app/other-products/page.js - Server Component
+import { SITE } from '@/lib/site';
 import OtherProductsClient from './_otherClient';
 import { getCollectionData } from '@/lib/serverData';
 
@@ -10,7 +11,7 @@ export const metadata = {
   openGraph: {
     title: 'منتجات أخرى',
     description: 'اكتشف مجموعة متنوعة من المنتجات التقنية بأسعار رائعة',
-    url: 'https://lap-tech-five.vercel.app/other',
+    url: `${SITE.url}/other`,
     type: 'website',
   },
 };

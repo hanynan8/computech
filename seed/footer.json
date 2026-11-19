@@ -1,0 +1,50 @@
+{
+  "company": {
+    "name": "كمبيوتك",
+    "subtitle": "Compu Tech – أسوان",
+    "description": "متجرك لأجهزة الكمبيوتر واللابتوبات ومستلزماتها في أسوان.",
+    "year": 2026
+  },
+  "socialLinks": [
+    { "platform": "Facebook", "icon": "FaFacebook", "url": "https://www.facebook.com/Compu1442/" },
+    { "platform": "Instagram", "icon": "FaInstagram", "url": "https://www.instagram.com/" }
+  ],
+  "sections": [
+    {
+      "title": "روابط سريعة",
+      "links": [
+        { "text": "الرئيسية", "href": "/" },
+        { "text": "من نحن", "href": "/aboutus" },
+        { "text": "اتصل بنا", "href": "/contact" },
+        { "text": "موقعنا", "href": "/location" }
+      ]
+    },
+    {
+      "title": "الأقسام",
+      "links": [
+        { "text": "لابتوب", "href": "/laptop" },
+        { "text": "مكونات كمبيوتر", "href": "/component" },
+        { "text": "تجميعات PC", "href": "/pc-builds" },
+        { "text": "اكسسوارات", "href": "/accessories" },
+        { "text": "شاشات", "href": "/monitors" },
+        { "text": "طابعات", "href": "/printers" },
+        { "text": "وسائط تخزين", "href": "/storage-devices" },
+        { "text": "نقاط البيع", "href": "/pos" },
+        { "text": "منتجات أخرى", "href": "/other" }
+      ]
+    },
+    {
+      "title": "تواصل معنا",
+      "content": {
+        "address": "بجوار إدارة المرور – ممر مطعم كشري الصفوة – عمارة السلواوي، أسوان",
+        "phone": "01115915118",
+        "email": "[البريد الإلكتروني]",
+        "workingHours": "[مواعيد العمل]"
+      }
+    }
+  ],
+  "bottomLinks": [
+    { "text": "من نحن", "href": "/aboutus" },
+    { "text": "اتصل بنا", "href": "/contact" }
+  ]
+}

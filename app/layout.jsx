@@ -3,6 +3,7 @@ import './globals.css';
 import Navbar from './components/navbar/navbar';
 import Footer from './components/footer/footer';
 import LayoutClient from './layoutClient';
+import { SITE } from '@/lib/site';
 
 // ملحوظة أداء/توافق: كان هنا `export const runtime = 'edge';`
 // لكن شلناه لأن صفحات المنتجات بقت تستورد lib/serverData.js (اللي بيستخدم
@@ -43,61 +44,54 @@ const amiri = Amiri({
   weight: ['400', '700'],
   variable: '--font-amiri',
 });
-// ----- METADATA (بدّل القيم هذه بالقيم الحقيقية لموقعك) -----
+// ----- METADATA — كمبيوتك أسوان (القيم من lib/site.js) -----
+const SITE_TITLE = `${SITE.fullName} | لابتوبات وأجهزة كمبيوتر جديدة واستيراد`;
 export const metadata = {
   title: {
-    default: 'TechLap Elite | احدث الادوات التقنية',
-    template: '%s | TechLap Elite',
+    default: SITE_TITLE,
+    template: `%s | ${SITE.fullName}`,
   },
   description:
-    'اكتشف أحدث المنتجات التقنية، أجهزة الكمبيوتر، والإكسسوارات — مواصفات مفصلة، عروض يومية، وشحن سريع.',
+    'كمبيوتك في أسوان: بيع وشراء أجهزة الكمبيوتر واللابتوب (جديد واستيراد فرز أول) بضمان، مع مكونات وشاشات وإكسسوارات — واطلب عبر واتساب.',
+  // الأيقونة من لوجو كمبيوتك (ملف /public/logo.png — شوف SITE.logo في lib/site.js)
   icons: {
-    icon: 'https://images.unsplash.com/photo-1603302576837-37561b2e2302?w=64&v=3',
-    shortcut:
-      'https://images.unsplash.com/photo-1603302576837-37561b2e2302?w=64&v=3',
-    apple:
-      'https://images.unsplash.com/photo-1603302576837-37561b2e2302?w=180&v=3',
+    icon: SITE.logo,
+    shortcut: SITE.logo,
+    apple: SITE.logo,
   },
   keywords: [
-    'تقنية',
-    'لابتوبات',
-    'إلكترونيات',
+    'كمبيوتك',
+    'Compu Tech',
+    'كمبيوتك أسوان',
+    'كمبيوتر أسوان',
+    'لابتوبات أسوان',
     'أجهزة كمبيوتر',
+    'مكونات كمبيوتر',
     'إكسسوارات',
-    'تسوق',
-    'عروض',
-    'أجهزة للمبدعين',
-    'TechLap Elite',
-    'لابتوبات الأعمال',
-    'أحدث أجهزة الجيمينج',
-    'لابتوبات للمونتاج',
-    'شحن سريع مصر',
-    'ضمان محلي',
+    'شاشات',
+    'طابعات',
+    'أجهزة استيراد فرز أول',
+    'تجميعات PC',
   ],
-  authors: [
-    {
-      name: 'Hany Younan Nazer',
-      url: 'https://my-portfolio-tau-six-33.vercel.app/',
-    },
-  ],
-  creator: 'Hany Younan Nazer',
-  publisher: 'TechLap Elite',
-  metadataBase: new URL('https://lap-tech-five.vercel.app/'),
+  authors: [{ name: SITE.fullName, url: SITE.url }],
+  creator: SITE.fullName,
+  publisher: SITE.fullName,
+  metadataBase: new URL(SITE.url),
   openGraph: {
     title: {
-      default: 'TechLap Elite | احدث الادوات التقنية',
-      template: '%s | TechLap Elite',
+      default: SITE_TITLE,
+      template: `%s | ${SITE.fullName}`,
     },
     description:
-      'تسوّق أحدث الادوات التقنية وأفضل الإكسسوارات مع أسعار تنافسية وجودة عالية.',
-    url: 'https://lap-tech-five.vercel.app/',
-    siteName: 'TechLap Elite',
+      'تسوّق لابتوبات ومكونات وإكسسوارات من كمبيوتك في أسوان، واطلب مباشرة عبر واتساب.',
+    url: SITE.url,
+    siteName: SITE.fullName,
     images: [
       {
         url: 'https://images.unsplash.com/photo-1525547719571-a2d4ac8945e2?w=1200&h=630&fit=crop',
         width: 1200,
         height: 630,
-        alt: 'TechLap Elite - أحدث المنتجات',
+        alt: `${SITE.fullName} - أحدث المنتجات`,
       },
     ],
     locale: 'ar_EG',
@@ -107,36 +101,32 @@ export const metadata = {
 
 // ====== export viewport ======
 export const viewport = {
-  themeColor: '#ffffff',
+  themeColor: '#0891b2',
   width: 'device-width',
   initialScale: 1,
 };
 
-// ====== JSON-LD structured data (مفصّل) ======
+// ====== JSON-LD structured data ======
+const sameAs = [SITE.facebook, SITE.instagram].filter(Boolean);
 const structuredData = {
   '@context': 'https://schema.org',
   '@graph': [
     {
-      '@type': 'Person',
-      '@id': 'https://lap-tech-five.vercel.app/#person-hany',
-      name: 'Hany Younan Nazer',
-      url: 'https://my-portfolio-tau-six-33.vercel.app/',
-      sameAs: [
-        'https://www.linkedin.com/in/hany-younan-5b7466372',
-        'https://github.com/hanynan8',
-        'https://www.facebook.com/hany.nan.752/',
-      ],
-      jobTitle: 'Full Stack Web Developer (Next/Node)',
-    },
-    {
-      '@type': 'Organization',
-      '@id': 'https://lap-tech-five.vercel.app/#organization',
-      name: 'TechLap Elite',
-      url: 'https://lap-tech-five.vercel.app/',
+      '@type': 'ComputerStore',
+      '@id': `${SITE.url}/#organization`,
+      name: SITE.fullName,
+      alternateName: SITE.nameEn,
+      url: SITE.url,
+      sameAs,
+      address: {
+        '@type': 'PostalAddress',
+        addressLocality: SITE.city,
+        addressCountry: 'EG',
+      },
       contactPoint: [
         {
           '@type': 'ContactPoint',
-          telephone: '+20-120-106-1216',
+          telephone: `+${SITE.whatsappNumber}`,
           contactType: 'customer service',
           areaServed: 'EG',
           availableLanguage: ['ar', 'en'],
@@ -145,15 +135,10 @@ const structuredData = {
     },
     {
       '@type': 'WebSite',
-      '@id': 'https://lap-tech-five.vercel.app/#website',
-      url: 'https://lap-tech-five.vercel.app/',
-      name: 'TechLap Elite',
-      publisher: { '@id': 'https://lap-tech-five.vercel.app/#organization' },
-      potentialAction: {
-        '@type': 'SearchAction',
-        target:
-          'https://lap-tech-five.vercel.app/search?q={search_term_string}',
-      },
+      '@id': `${SITE.url}/#website`,
+      url: SITE.url,
+      name: SITE.fullName,
+      publisher: { '@id': `${SITE.url}/#organization` },
     },
   ],
 };

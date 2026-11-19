@@ -1,0 +1,10 @@
+{
+  "company": { "name": "كمبيوتك", "nameEn": "Compu Tech", "city": "أسوان" },
+  "navLinks": [
+    { "text": "الرئيسية", "href": "/" },
+    { "text": "المنتجات", "href": "/laptop" },
+    { "text": "من نحن", "href": "/aboutus" },
+    { "text": "اتصل بنا", "href": "/contact" },
+    { "text": "موقعنا", "href": "/location" }
+  ]
+}

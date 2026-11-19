@@ -30,12 +30,12 @@ import {
   Smartphone,
   RefreshCw,
   Heart,
-  Wrench,
+  Phone,
   Store,
-  BadgePercent,
+  MessageCircle,
   Printer,
-  CreditCard,
 } from 'lucide-react';
+import { WHATSAPP_URL } from '@/lib/site';
 
 // Icon mapping for features and categories
 const iconMap = {
@@ -230,13 +230,6 @@ const ProductCard = ({ product, categoryKey }) => {
               </span>
             </span>
           </div>
-        </div>
-
-        <div className="mb-4 sm:mb-6">
-          <span className="inline-flex items-center gap-1 bg-emerald-50 text-emerald-700 text-xs font-normal px-2.5 py-1 rounded-full">
-            <CreditCard size={12} />
-            تقسيط بدون فوائد متاح
-          </span>
         </div>
 
         {/* mt-auto بيثبت الزرار في آخر الكارت دايماً على نفس المحور
@@ -450,7 +443,7 @@ const DEFAULT_HERO_SLIDES = [
   {
     id: 'default-1',
     title: 'أحدث اللابتوبات بأفضل الأسعار',
-    subtitle: 'اداء قوي، بطارية تدوم، وضمان محلي على كل الأجهزة',
+    subtitle: 'أداء قوي وبطارية تدوم — لابتوبات لكل استخدام',
     backgroundImage:
       'https://images.unsplash.com/photo-1706101126602-5a6132b98b8b?auto=format&fit=crop&w=1600&q=80',
     href: '/laptop',
@@ -459,7 +452,7 @@ const DEFAULT_HERO_SLIDES = [
   {
     id: 'default-2',
     title: 'جمّع جهازك بنفسك',
-    subtitle: 'مكونات أصلية لأقوى تجميعات الجيمينج والعمل',
+    subtitle: 'مكونات لأقوى تجميعات الجيمينج والعمل',
     backgroundImage:
       'https://images.unsplash.com/photo-1660855551740-4474188debdb?auto=format&fit=crop&w=1600&q=80',
     href: '/pc-builds',
@@ -476,8 +469,8 @@ const DEFAULT_HERO_SLIDES = [
   },
   {
     id: 'default-4',
-    title: 'مكونات كمبيوتر أصلية 100%',
-    subtitle: 'معالجات، رامات، وكروت شاشة بأفضل الأسعار وضمان الوكيل',
+    title: 'مكونات كمبيوتر لكل تجميعة',
+    subtitle: 'معالجات، رامات، وكروت شاشة لتجميعات الجيمينج والعمل',
     backgroundImage:
       'https://images.unsplash.com/photo-1562408590-e32931084e23?auto=format&fit=crop&w=1600&q=80',
     href: '/component',
@@ -613,13 +606,13 @@ const HeroSection = ({ heroData }) => {
   );
 };
 
-// شريط ميزات سريع (صيانة / استلام من الفرع / تقسيط) - نفس فكرة صف
+// شريط ميزات سريع (تواصل / استلام من الفرع / واتساب) - نفس فكرة صف
 // الخدمات اللي بيظهر فوق الهيرو في التصميم المرجعي.
 const QuickFeaturesStrip = () => {
   const items = [
     {
-      icon: Wrench,
-      title: 'الصيانة',
+      icon: Phone,
+      title: 'تواصل معنا',
       href: '/contact',
     },
     {
@@ -628,9 +621,9 @@ const QuickFeaturesStrip = () => {
       href: '/location',
     },
     {
-      icon: BadgePercent,
-      title: 'اقساط',
-      href: '/laptop',
+      icon: MessageCircle,
+      title: 'اطلب على واتساب',
+      href: WHATSAPP_URL,
     },
   ];
 
@@ -658,37 +651,6 @@ const QuickFeaturesStrip = () => {
     </section>
   );
 };
-
-// بانر التقسيط (زي بانر VALU البرتقالي في التصميم المرجعي) - بيّن هنا
-// بشكل عام يناسب أي متجر بدل ما نخترع اسم شركة تقسيط مش موجودة عندنا.
-const InstallmentBanner = () => (
-  <section className="bg-white">
-    <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pb-4 sm:pb-6">
-      <div className="bg-[rgb(253,89,0)] rounded-xl sm:rounded-2xl overflow-hidden">
-        <div className="flex flex-wrap items-center justify-between gap-2 px-4 sm:px-6 py-3 sm:py-4 text-white">
-          <div className="flex items-center gap-2 font-normal text-sm sm:text-lg">
-            <CreditCard className="w-5 h-5 sm:w-6 sm:h-6" />
-            قسّط منتجاتك على 12 شهر
-          </div>
-          <div className="flex flex-wrap items-center gap-2 sm:gap-4 text-xs sm:text-sm font-normal">
-            <span className="bg-white/15 px-2.5 sm:px-3 py-1 rounded-full">
-              0% مقدم
-            </span>
-            <span className="bg-white/15 px-2.5 sm:px-3 py-1 rounded-full">
-              0% فوائد
-            </span>
-            <span className="bg-white/15 px-2.5 sm:px-3 py-1 rounded-full">
-              0% مصاريف إدارية
-            </span>
-          </div>
-          <span className="text-xs sm:text-sm font-normal bg-white text-[rgb(253,89,0)] px-3 py-1 rounded-full">
-            بسعر الكاش
-          </span>
-        </div>
-      </div>
-    </div>
-  </section>
-);
 
 // صف أيقونات التصنيفات الحقيقية أسفل الهيرو (نفس تصنيفات المتجر بالظبط)
 const CATEGORY_RAIL_ITEMS = [
@@ -892,11 +854,8 @@ const [homeData] = useState(initialData?.homeData);
 
   return (
     <div className="min-h-screen bg-slate-50" dir="rtl">
-      {/* شريط الميزات السريعة (صيانة / استلام من الفرع / تقسيط) */}
+      {/* شريط الميزات السريعة (تواصل / استلام من الفرع / واتساب) */}
       <QuickFeaturesStrip />
-
-      {/* بانر التقسيط */}
-      <InstallmentBanner />
 
       {/* Hero Section */}
       <HeroSection heroData={homeData?.hero} />

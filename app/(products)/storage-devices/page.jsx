@@ -1,4 +1,5 @@
 // app/storage-devices/page.tsx - Server Component
+import { SITE } from '@/lib/site';
 import { Suspense } from 'react';
 import StorageClient from './_storageClient';
 import { getCollectionData } from '@/lib/serverData';
@@ -158,7 +159,7 @@ export const metadata = {
   description: 'تسوق أفضل وسائط التخزين بأسعار مميزة. أقراص صلبة، SSD، فلاش ميموري، بطاقات ذاكرة وأكثر',
   keywords: ['وسائط تخزين', 'أقراص صلبة', 'SSD', 'فلاش ميموري', 'بطاقات ذاكرة', 'Hard Drive', 'Storage Devices', 'External SSD', 'USB Drive', 'Memory Card', 'Portable Storage', 'Data Storage'],
     openGraph: {
-    url: 'https://lap-tech-five.vercel.app/storage-devices',
+    url: `${SITE.url}/storage-devices`,
     title: 'وسائط التخزين',
     description: 'تسوق أفضل وسائط التخزين بأسعار مميزة. أقراص صلبة، SSD، فلاش ميموري، بطاقات ذاكرة وأكثر',
     type: 'website'

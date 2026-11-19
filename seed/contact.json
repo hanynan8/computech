@@ -1,0 +1,47 @@
+{
+  "pageTitle": "اتصل بنا",
+  "pageSubtitle": "كمبيوتك – أسوان. اسأل عن أي منتج أو خدمة وهنرد عليك.",
+  "contactInfo": [
+    { "icon": "Phone", "title": "الهاتف", "color": "from-green-500 to-emerald-500", "details": ["01115915118"] },
+    { "icon": "Mail", "title": "البريد الإلكتروني", "color": "from-purple-500 to-blue-500", "details": ["[البريد الإلكتروني]"] },
+    { "icon": "MapPin", "title": "العنوان", "color": "from-red-500 to-pink-500", "details": ["بجوار إدارة المرور – ممر مطعم كشري الصفوة – عمارة السلواوي، أسوان"] },
+    { "icon": "Clock", "title": "مواعيد العمل", "color": "from-orange-500 to-yellow-500", "details": ["[مواعيد العمل]"] }
+  ],
+  "formLabels": {
+    "formTitle": "أرسل لنا رسالة",
+    "formSubtitle": "اكتب استفسارك وهنتواصل معاك",
+    "successMessage": "تم استلام رسالتك، شكراً لتواصلك مع كمبيوتك.",
+    "fields": {
+      "name": { "label": "الاسم", "placeholder": "اكتب اسمك" },
+      "email": { "label": "البريد الإلكتروني", "placeholder": "example@email.com" },
+      "phone": { "label": "رقم الموبايل", "placeholder": "01115915118" },
+      "type": {
+        "label": "نوع الاستفسار",
+        "options": [
+          { "value": "general", "label": "استفسار عام" },
+          { "value": "sales", "label": "مبيعات وأسعار" },
+          { "value": "support", "label": "دعم فني" },
+          { "value": "other", "label": "أخرى" }
+        ]
+      },
+      "subject": { "label": "الموضوع", "placeholder": "موضوع الرسالة" },
+      "message": { "label": "الرسالة", "placeholder": "اكتب رسالتك هنا" }
+    },
+    "submitButton": { "default": "إرسال", "loading": "جاري الإرسال..." }
+  },
+  "contactMethods": [
+    { "icon": "MessageCircle", "title": "واتساب", "description": "كلمنا مباشرة على واتساب للاستفسار عن الأسعار والتوفر.", "color": "from-green-500 to-emerald-500", "buttonText": "ابدأ المحادثة" }
+  ],
+  "faqSection": {
+    "title": "أسئلة شائعة",
+    "subtitle": "[يُستكمل بالأسئلة الفعلية للمتجر]",
+    "items": [
+      { "question": "[السؤال]", "answer": "[الإجابة]" }
+    ]
+  },
+  "socialSection": {
+    "title": "تابعنا على السوشيال ميديا",
+    "subtitle": "آخر العروض والمنتجات على صفحتنا",
+    "storeButton": "تسوق الآن"
+  }
+}

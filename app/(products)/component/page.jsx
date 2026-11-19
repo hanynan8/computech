@@ -1,4 +1,5 @@
 // app/components/page.js - Server Component
+import { SITE } from '@/lib/site';
 import ComputerComponentsClient from './_compClient';
 import { getCollectionData } from '@/lib/serverData';
 
@@ -12,7 +13,7 @@ export const metadata = {
     'Build PC', 'تجميع جهاز', 'عُملية تبريد', 'عروض المكونات', 'مكونات الكمبيوتر الاحترافية', 'اختر أفضل قطع الكمبيوتر لتجميع جهازك المثالي بأعلى جودة وأفضل الأسعار'
   ],
   openGraph: {
-    url: 'https://lap-tech-five.vercel.app/component',
+    url: `${SITE.url}/component`,
     title: 'مكونات الكومبيوتر',
     description: 'دليل شامل لأفضل مكونات الحاسوب: مواصفات، مقارنة، ونصائح اختيار القطع المناسبة لتجميع جهازك أو ترقية الأداء.',
     type: 'website',

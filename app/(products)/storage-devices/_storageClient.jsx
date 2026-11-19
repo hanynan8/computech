@@ -1,5 +1,6 @@
 'use client';
 
+import { SITE } from '@/lib/site';
 import AddToCartButton from '../../(products)/_addToTheCart'; // Adjust the path based on your project structure
 import React, {
   useState,
@@ -427,7 +428,7 @@ const ComputerComponentsClient = ({ initialData, error }) => {
 
   const [currentPage, setCurrentPage] = useState(1);
   const [itemsPerPage] = useState(20);
-  const whatsappNumber = data?.settings?.whatsappNumber || '2001201061216';
+  const whatsappNumber = data?.settings?.whatsappNumber || SITE.whatsappNumber;
   const { data: session } = useSession();
 
   const fetchCartCount = async () => {

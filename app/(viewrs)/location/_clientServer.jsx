@@ -1,5 +1,6 @@
 'use client';
 
+import { MAP_URL, WHATSAPP_URL } from '@/lib/site';
 import React, { useState, useEffect } from 'react';
 import {
   MapPin,
@@ -27,7 +28,7 @@ import {
 import Link from 'next/link';
 
 function goToWatssap() {
-  window.open('https://wa.me/+2001201061216');
+  window.open(WHATSAPP_URL);
 }
 
 const LocationPageClient = ({ initialData, error: serverError }) => {
@@ -296,7 +297,7 @@ const LocationPageClient = ({ initialData, error: serverError }) => {
                   </div>
                   <div className="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4 sm:space-x-reverse">
                     <button className="flex-1 bg-purple-600 text-white py-2 sm:py-3 rounded-xl font-bold hover:bg-purple-700 transition-colors">
-                      <Link href="https://www.google.com/maps?q=24.08935573826058,32.899505653834204">
+                      <Link href={MAP_URL}>
                         {locationData.mapSection.buttons?.directions ||
                           'اتجاهات'}
                         <Navigation className="w-4 sm:w-5 h-4 sm:h-5 inline mr-2" />
@@ -305,7 +306,7 @@ const LocationPageClient = ({ initialData, error: serverError }) => {
                     <button
                       onClick={async () => {
                         const mapUrl =
-                          'https://www.google.com/maps?q=24.08935573826058,32.899505653834204';
+                          MAP_URL;
                         try {
                           await navigator.clipboard.writeText(mapUrl);
                           alert('📋 تم نسخ الرابط!');
@@ -393,7 +394,7 @@ const LocationPageClient = ({ initialData, error: serverError }) => {
                   </div>
                   <Link
                     href={
-                      'https://www.google.com/maps?q=24.08935573826058,32.899505653834204'
+                      MAP_URL
                     }
                   >
                     <button className="w-full bg-gradient-to-r from-purple-600 to-blue-600 text-white py-2 sm:py-3 rounded-xl font-bold hover:shadow-lg transform hover:scale-105 transition-all duration-300">
@@ -470,7 +471,7 @@ const LocationPageClient = ({ initialData, error: serverError }) => {
               <button className="bg-white text-purple-600 px-8 sm:px-12 py-3 sm:py-4 rounded-full text-lg sm:text-xl font-bold hover:shadow-2xl transform hover:scale-105 transition-all duration-300">
                 <Link
                   href={
-                    'https://www.google.com/maps?q=24.08935573826058,32.899505653834204'
+                    MAP_URL
                   }
                 >
                   {locationData.visitSection.buttons?.visit || 'زيارة الموقع'}

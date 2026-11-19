@@ -1,5 +1,6 @@
 'use client';
 
+import BrandLogo from '../BrandLogo';
 import React from 'react';
 import {
   FaTwitter,
@@ -7,6 +8,7 @@ import {
   FaLinkedin,
   FaInstagram,
   FaYoutube,
+  FaWhatsapp,
   FaPhone,
   FaEnvelope,
   FaMapMarkerAlt,
@@ -18,7 +20,8 @@ const iconComponents = {
   FaFacebook,
   FaLinkedin,
   FaInstagram,
-  FaYoutube
+  FaYoutube,
+  FaWhatsapp
 };
 
 export default function Footer({ footerData, loading }) {
@@ -47,9 +50,12 @@ export default function Footer({ footerData, loading }) {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           {/* company */}
           <div className="col-span-1 lg:col-span-2">
-            <h3 className="text-2xl md:text-3xl font-bold bg-gradient-to-r from-purple-400 to-blue-400 bg-clip-text text-transparent mb-4">
-              {safe.company?.name || ''}
-            </h3>
+            <div className="mb-4 flex items-center gap-3">
+              <BrandLogo className="h-12 w-auto" />
+              <h3 className="text-2xl md:text-3xl font-bold bg-gradient-to-r from-purple-400 to-blue-400 bg-clip-text text-transparent">
+                {safe.company?.name || ''}
+              </h3>
+            </div>
 
             {safe.company?.subtitle && (
               <p className="text-gray-400 text-base md:text-lg mb-6">{safe.company.subtitle}</p>

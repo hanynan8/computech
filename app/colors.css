@@ -1,0 +1,15 @@
+/*
+  colors.css — هوية كمبيوتك الألوانية (مصدر واحد).
+  ⚠️ [PLACEHOLDER] مفيش لوجو/ألوان رسمية متاحة لكمبيوتك أسوان وقت التعديل، فالألوان دي
+  لوحة "تقنية" مؤقتة (سماوي/تيل + كحلي). غيّر القيم هنا وفي tailwind.config.js (نفس الأرقام)
+  أول ما تتحدد ألوان اللوجو الحقيقي.
+*/
+:root {
+  --brand-primary: #0891b2;       /* الرئيسي (كان البنفسجي) */
+  --brand-primary-dark: #0e7490;
+  --brand-primary-light: #ecfeff;
+  --brand-accent: #2b5590;        /* الثانوي (كان الأزرق) */
+  --brand-accent-dark: #1e3a5f;
+  --brand-gold: #ffc531;          /* نجوم/تقييمات */
+  --scrollbar-track: #f1f5f9;
+}

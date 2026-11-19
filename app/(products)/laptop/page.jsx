@@ -1,4 +1,5 @@
 // app/laptop/page.js (Server Component)
+import { SITE } from '@/lib/site';
 import React, { Suspense } from 'react';
 import { Loader } from 'lucide-react';
 import ProductsClient from './_lapClient';
@@ -12,7 +13,7 @@ export const metadata = {
     'لابتوب', 'اللابتوبات', 'أجهزة محمولة', 'Gaming Laptop', 'محمول للعمل', 'Intel', 'AMD', 'M2', 'RAM', 'SSD', 'شاشة 144Hz', 'بطاقة رسومية'
   ],
   openGraph: {
-    url: 'https://lap-tech-five.vercel.app/laptop',
+    url: `${SITE.url}/laptop`,
     title: 'اللابتوبات',
     description: 'تصفح أفضل عروض اللابتوبات: مواصفات تفصيلية ومراجعات لمساعدتك في اختيار الجهاز الأمثل.',
     type: 'website'

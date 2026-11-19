@@ -1,5 +1,6 @@
 'use client';
 
+import { SITE } from '@/lib/site';
 import AddToCartButton from '../../(products)/_addToTheCart'; // Adjust the path based on your project structure
 import React, {
   useState,
@@ -447,7 +448,7 @@ const ComputerComponentsClient = ({ initialData, error }) => {
   const [currentPage, setCurrentPage] = useState(1);
   const [itemsPerPage] = useState(20);
 
-  const whatsappNumber = data?.settings?.whatsappNumber || '2001201061216';
+  const whatsappNumber = data?.settings?.whatsappNumber || SITE.whatsappNumber;
   const { data: session } = useSession();
 
   const fetchCartCount = async () => {
@@ -845,7 +846,7 @@ const ComputerComponentsClient = ({ initialData, error }) => {
         }
 
         .btn-gradient:hover {
-          background: linear-gradient(45deg, #7c3aed, #2563eb);
+          background: linear-gradient(45deg, var(--brand-primary), var(--brand-accent));
           transform: translateY(-1px);
           box-shadow: 0 10px 20px rgba(147, 51, 234, 0.3);
         }
@@ -887,7 +888,7 @@ const ComputerComponentsClient = ({ initialData, error }) => {
         }
 
         ::-webkit-scrollbar-thumb:hover {
-          background: linear-gradient(45deg, #7c3aed, #2563eb);
+          background: linear-gradient(45deg, var(--brand-primary), var(--brand-accent));
         }
 
         /* تحسين الفوكس للوصولية */
